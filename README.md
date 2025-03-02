@@ -26,7 +26,16 @@ This is a Java-based AI Chatbot built using **Spring Boot**. It provides an API 
 ### Prerequisites  
 - Java 17+  
 - Maven  
-- Spring Boot  
+- Spring Boot
+
+- 
+🔑 Set Up Gemini API Key
+
+Before running the application, add your Gemini API key in the application.properties file:
+
+spring.ai.openai.api-key=YOUR_API_KEY_HERE
+
+Replace YOUR_API_KEY_HERE with your actual API key.
 
 ### Steps to Run  
 1. Clone the repository:  
