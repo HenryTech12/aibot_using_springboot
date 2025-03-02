@@ -58,7 +58,7 @@ Replace YOUR_API_KEY_HERE with your actual API key.
 | POST   | `/chat`      | Process chatbot request  |
 
 ## 🎨 UI Preview  
-![Chatbot UI](screenshot.png)
+![Chatbot UI](screenshot_1.jpg)
 
 ## 🤝 Contributing  
 Feel free to submit pull requests to improve the chatbot!
