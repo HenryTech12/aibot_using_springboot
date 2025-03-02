@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+
+  <!-- HTML -->
+
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+<!-- Project -->
+<main class="container">
+  <header class="header">
+    <section>
+      <h3>Chatbot</h3>
+      <section class="typingLabel">
+        <span>user is typing</span>
+      </section>
+    </section>
+    <span class="material-symbols-outlined icon" onclick="openBar()">more_vert</span>
+  </header>
+
+  <div class="form">
+
+  <aside class="sidebar">
+    <ol>
+      <li>
+        <button>
+          <span class="material-symbols-outlined">add</span>
+          <span>New Chat</span>
+        </button>
+      </li>
+    </ol>
+  </aside>
+
+  <div class="content" th:each=" ai, stat : ${aiMSG}">
+
+    <section class="user chatBox">
+        <div th:text="${userMSG[stat.index]}" class="userText"></div>
+    </section>
+
+    <section class="ai chatBox">
+      <div th:text="${aiMSG[stat.index]}" class="aiText"></div>
+    </section>
+  </div>
+  </div>
+  <div class="footer">
+    <form th:object="${tRequest}">
+      <input type="text" placeholder="Write Your Message" class="textbox" th:field="*{request}" id="txt">
+      <button th:formaction="@{/chat}">
+        <span class="material-symbols-outlined">send</span>
+      </button>
+    </form>
+  </div>
+</main>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --HEADER-MIN-HEIGHT: 3rem;
+  --CONTAINER-HEIGHT: 90%;
+}
+*, *::before , *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  border: 1px solid black;
+  max-width: 500px;
+  margin: 2em auto;
+  border-radius: 20px;
+}
+.form {
+  width: 100%;
+  margin: 0 auto;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.header {
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  height: 4rem;
+  background: red;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  color: white;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.header h3 {
+  font-family: 'Merriweather';
+}
+.header section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.01rem;
+}
+.header section .typingLabel {
+  font-size: 1rem;
+  font-family: 'Lato';
+  color: whitesmoke;
+  opacity: 0.8;
+  font-weight: bolder;
+  display: none;
+  flex-direction: row;
+  gap: 0.3rem;
+  align-items: center;
+}
+.header .icon {
+  display: inline-block;
+  font-size: 2rem;
+  cursor: pointer;
+  background: transparent;
+  user-select: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  gap: 0.8rem;
+  max-height: 400px;
+}
+.content .chatBox {
+  flex: 1;
+  background: whitesmoke;
+  max-width: 200px;
+  padding: 0.5rem 1rem;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  font-family: 'Nunito';
+
+}
+.content .user {
+  margin-left: auto;
+}
+
+.footer form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.footer input {
+  height: 2.5rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px 0px darkgray;
+  backdrop-filter: blur(1.5rem);
+  border-radius: 15px;
+  padding-left: 10px;
+  font-family: 'Open Sans';
+}
+.footer button {
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: red;
+}
+.sidebar {
+  display: none;
+  justify-content: flex-end;
+  background: orangered;
+  width: 120px;
+  position: fixed;
+  margin-left: auto;
+  transition: all 0.8s;
+}
+.sidebar:hover {
+  width: 170px;
+}
+.sidebar ol {
+  list-style: none;
+  width: 100%;
+}
+.sidebar button {
+  height: 3rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bolder;
+  box-shadow: 0px 0px 3px 0px darkgray;
+  backdrop-filter: blur(2rem);
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+   background: transparent;
+   border-radius: 10px;
+ }
+ ::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 5px;
+ }
+
+ /* ANIMATE TYPING */
+ .typing {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .typing span {
+   width: 7px;
+   height: 7px;
+   background: gray;
+   border-radius: 50%;
+   animation: typing-animation 1.5s infinite ease-in-out;
+ }
+
+ .typing span:nth-child(2) {
+    animation-delay: 0.2s;
+ }
+
+ .typing span:last-child {
+    animation-delay: 0.4s;
+ }
+
+ @keyframes typing-animation {
+   0%, 100% {
+      opacity: 0.3;
+   }
+   50% {
+      opacity: 1;
+   }
+ }
